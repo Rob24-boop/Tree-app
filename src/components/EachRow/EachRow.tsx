@@ -11,6 +11,7 @@ import Modal from "../Modal";
 import { axiosForEditing } from "../../store/Slices/treeSlice/api/axiosForEditing";
 import { axiosForDeleting } from "../../store/Slices/treeSlice/api/axiosForDeleting";
 import { axiosTree } from "../../store/Slices/treeSlice/api/axiosForTree";
+import { TREE_NAME } from "../../config";
 
 
 const EachRow: FC<IPropNode> = ({ node }) => {
@@ -84,7 +85,7 @@ const EachRow: FC<IPropNode> = ({ node }) => {
             <AddIcon onClick={() => handleOnIconClick("add")} />
             <EditIcon onClick={() => handleOnIconClick("edit")} />
             <DeleteIcon
-              onClick={() => handleOnClickingDeleting("newTree", selected.id)}
+              onClick={() => handleOnClickingDeleting(TREE_NAME, selected.id)}
             />
           </div>
         )}
