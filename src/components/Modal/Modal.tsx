@@ -20,6 +20,20 @@ const Modal: React.FC<IModalProps> = ({
     }
   };
 
+  if (iconType === "delete") {
+    return (
+      <div className={styles.modalOverlay}>
+        <div className={styles.modal}>Do you want to delete this item ?</div>
+        <div className={styles.modalActions}>
+          <button type="button" onClick={onClose}>
+            Cancel
+          </button>
+          <button type="submit">Delete</button>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className={styles.modalOverlay}>
       <div className={styles.modal}>
