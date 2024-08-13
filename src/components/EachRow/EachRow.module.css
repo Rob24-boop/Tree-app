@@ -1,0 +1,12 @@
+.selected {
+    background-color: rgb(226, 225, 225);
+    display: flex;
+}
+
+.row {
+    display: flex;
+}
+
+.child {
+    margin-left: 15px;
+}
